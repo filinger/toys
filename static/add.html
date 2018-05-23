@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <title>My Awesome Toy Shop</title>
+
+    <style>
+        body > .container {
+          padding: 60px 15px 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">My Awesome Toy Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="add">Add <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="select">Select</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main role="main" class="container">
+    <h1 class="mt-5">Add a new toy</h1>
+
+    <div class="row">
+        <div class="col-md-12">
+            <form action="/add" method="post" class="needs-validation">
+                <div class="form-row">
+                    <div class="col-md-4 input-group">
+                        <div class="input-group-prepend"><span class="input-group-text">Name</span></div>
+                        <input type="text" class="form-control" name="name" placeholder="Doominator 9000" required>
+                    </div>
+                    <div class="col-md-4 input-group">
+                        <div class="input-group-prepend"><span class="input-group-text">Price</span></div>
+                        <input type="number" min="0" max="100000" class="form-control" name="price" placeholder="99" required>
+                        <div class="input-group-append"><span class="input-group-text">₴</span></div>
+                    </div>
+
+                    <div class="col-md-4 input-group">
+                        <div class="input-group-prepend"><span class="input-group-text">Age</span></div>
+                        <input type="number" min="0" max="100" class="form-control" name="minAge" placeholder="Min">
+                        <input type="number" min="0" max="100" class="form-control" name="maxAge" placeholder="Max">
+                    </div>
+                </div>
+
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
